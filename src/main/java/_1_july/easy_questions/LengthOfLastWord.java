@@ -8,6 +8,7 @@ public class LengthOfLastWord {
 
     public static void main(String[] args) {
         String input = "   fly me   to   the moon  ";
+        //String input = "a ";
         System.out.println(lengthOfLastWord(input));
     }
 
@@ -16,10 +17,10 @@ public class LengthOfLastWord {
         int pointer = s.length()-1;
         int lengthOfLastWord = 0;
 
-        while (pointer>0 && s.charAt(pointer) == ' ')
+        while (pointer>=0 && s.charAt(pointer) == ' ')
             pointer--;
 
-        while (s.charAt(pointer) != ' ') {
+        while (pointer>=0 && s.charAt(pointer) != ' ') {
             lengthOfLastWord++;
             pointer--;
         }
